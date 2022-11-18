@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="resume.xsl" ?>
+
+<resume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="resume.xsd">
+
+<!-- Personal Information -->
+
+<personal>
+  <name>Seyed Sajjad Daneshmand</name>
+  <address>Edmonton, AB, Canada</address>
+  <phone>(780)-893-7079</phone>
+  <email>seyedsaj@ualberta.ca</email>
+  <description>
+    I am 5th year Software Engineering student at the University of Alberta, I have 
+		co-founded the Maple Dating Inc. and am the CEO of this organization, we have developed 
+		number of applications such as Maple Dating mobile application, Beyond careers and are 
+		looking forward for new projects to take on God willing.
+  </description>
+</personal>
+
+<!-- University Degree -->
+  
+<education>
+  <school>
+    <name>University of Alberta</name>
+    <address>Edmonton, AB, Canada</address>
+    <degree>Software Engineering</degree>
+    <graduation>2023</graduation>
+  </school>
+</education>
+
+<!-- Work Experience -->
+
+<experience>
+
+  <work>
+    <title>CEO and Co-Founder</title>
+    <organization>Maple Dating Inc.</organization>
+    <start>2019</start>
+    <finish>N/A</finish>
+    <description>
+			Me and my Co-Founder began the work on a dating app in August 2019, we worked with a contractor to help us develop
+			the app as I did not have enough confidence in myself to take charge of the whole project and hire talented people to
+			help us along the way. The first version was released in February 2020 and it was a disaster, we continued to work with
+			them until May 2021 which we have had enough with them. This time I took responsibility and assembled a team to
+			finish this project, I have conducted extensive interviews and started holding meetings, doing code reviews every week
+			and take an initiative and active role in my company. We currently have 5 employees that are back-end and front-end
+			developers, UI/UX designers. We are very close to release our first production ready version on App Store and Google
+			Play.
+
+			Google play link: https://play.google.com/store/apps/details?id=dating.maple.mapledating
+		</description>
+  </work>
+
+  <work>
+    <title>IT Assistant</title>
+    <organization>Prilyx</organization>
+    <start>2019</start>
+    <finish>2019</finish>
+    <description>
+			Evaluated different techonology tools and developed a simple tutorial 
+			for new recruits.
+		</description>
+  </work>
+
+  <extra_curriculum>
+    <title>VP of Finance</title>
+    <organization>University of Alberta Computer Engineering Club</organization>
+    <start>2020</start>
+    <finish>2021</finish>
+    <description>
+			Handled finance and made a spread sheet for the budget regarding expenses and revenues for the club and allocated a
+			part of the budget for more social activities for students. Designed, surveyed, marketed, and negotiated the
+			merchandise on behalf of computer engineering students.
+		</description>
+  </extra_curriculum>
+
+  <extra_curriculum>
+    <title>Software Engineer</title>
+    <organization>UAARG (UAV Drones)</organization>
+    <start>2019</start>
+    <finish>2019</finish>
+    <description>
+			Worked with the Auto Pilot team using the Paparazzi UAV open-source software to help the UAV to navigate through
+			the desired checkpoints. We used the Dijkstras algorithm to help us with shortest path finding problems.
+    </description>
+  </extra_curriculum>
+
+</experience>
+
+<!-- Work Skills -->
+
+<skills>
+	<expert>		
+		Python, C/C++, Java, SQL, Sqlite3, MongoDB, Firebase, Linux, Continuous Integration
+	</expert>
+	<intermediate>
+		Rust, Node.js, GraphQL, React, Django, Android Studio, JavaScript, HTML, CSS
+	</intermediate>
+	<software_engineering>
+		Parallelism, Object-Oriented, Relational and Non-Relational DB, UML diagrams, Unit/Integration Testing.
+	</software_engineering>
+	<tools>Jira, Slack, Discord, Github, Gitlab</tools>
+</skills>
+
+</resume>
