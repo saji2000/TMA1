@@ -1,0 +1,12 @@
+.body {
+    margin: auto;
+    width: 90%;
+}
+
+.title{
+    padding: 10px;
+}
+
+.personal {
+    display: inline-block;
+}
