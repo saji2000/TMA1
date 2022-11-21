@@ -1,0 +1,35 @@
+html {
+    font-family: arial,sans-serif;
+}
+
+.body {
+    margin: auto;
+    width: 90%;
+}
+
+.description{
+    font-size: 18px;
+}
+
+.title{
+    padding: 10px;
+}
+
+.personal {
+    display: inline-block;
+}
+
+.github{
+    width: 100;
+    height: 50;
+}
+
+.linkedin{
+    width: 50;
+    height: 50;
+}
+
+.email{
+    width: 50;
+    height: 50;
+}

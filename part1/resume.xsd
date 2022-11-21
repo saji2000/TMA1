@@ -28,7 +28,7 @@
                     <xs:element type="xs:string" name="name"/>
                     <xs:element type="xs:string" name="address"/>
                     <xs:element type="xs:string" name="degree"/>
-                    <xs:element type="xs:short" name="graduation"/>
+                    <xs:element type="xs:string" name="date"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>

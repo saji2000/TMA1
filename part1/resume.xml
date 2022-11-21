@@ -26,7 +26,7 @@ xsi:noNamespaceSchemaLocation="resume.xsd">
     <name>University of Alberta</name>
     <address>Edmonton, AB, Canada</address>
     <degree>Software Engineering</degree>
-    <graduation>2023</graduation>
+    <date>2018-2023</date>
   </school>
 </education>
 
