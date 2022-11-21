@@ -16,8 +16,8 @@
           <div class="personal">
             <xsl:for-each select="personal">
               <h3><xsl:value-of select="name"/></h3>
-              <p><xsl:value-of select="address"/></p>
-              <a href="https://github.com/saji2000">github</a>
+              <span><xsl:value-of select="address"/></span>
+              <a href="https://github.com/saji2000">     github</a>
               <button><a href="mailto:seyedsaj@ualberta.ca">Email Contact</a></button>  
             </xsl:for-each>
           </div>
