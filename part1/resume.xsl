@@ -58,8 +58,8 @@
                             <div class="description">
                                 <xsl:for-each select="experience">
                                     <xsl:for-each select="work">
-                                        <p><xsl:value-of select="organization"/> , <xsl:value-of select="title"/></p>
-                                        <p><xsl:value-of select="degree"/>, <xsl:value-of select="date"/></p>
+                                        <p><h4><xsl:value-of select="organization"/></h4> <xsl:value-of select="title"/>, <xsl:value-of select="date"/></p>
+                                        <p><xsl:value-of select="description"/></p>
                                     </xsl:for-each>
                                 </xsl:for-each>
                             </div>
