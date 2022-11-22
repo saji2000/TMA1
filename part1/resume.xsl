@@ -6,18 +6,35 @@
                 <title>Part 1: Seyed Sajjad Daneshmand's Resume</title>
                 <link rel="stylesheet" href="../shared/css/style.css" />
             </head>
+            <header>
+                <div>
+                  <!-- <div>
+                    <img src="../shared/images/github.png" alt="logo" class="github"></img>
+                  </div> -->
+                    <h1>Menu</h1>
+                  <nav>
+                    <ul>
+                      <li><a href="../tma.htm">Home</a></li>
+                      <li class="active"><a href="/part1/resume.xml">Part 1</a></li>
+                      <li><a href="/part2/part2.html">Part 2</a></li>
+                      <li><a href="/part3/part3.html">Part 3</a></li>
+                      <li><a href="/part4/part4.html">Part 4</a></li>
+                    </ul>
+                  </nav>
+                </div>
+            </header>
             <body>
                 <main>
                     <section>
                         <div class="body">
                             <div class="title">
-                                <h2>Personal Infromation</h2>
+                                <h3>Personal Infromation</h3>
                             </div>
                             <div class="personal">
                                 <xsl:for-each select="personal">
-                                    <h3>
+                                    <h4>
                                         <xsl:value-of select="name" />
-                                    </h3>
+                                    </h4>
                                     <span>
                                         <xsl:value-of select="address" />
                                     </span>
@@ -61,6 +78,17 @@
                                         <p><h4><xsl:value-of select="organization"/></h4> <xsl:value-of select="title"/>, <xsl:value-of select="date"/></p>
                                         <p><xsl:value-of select="description"/></p>
                                     </xsl:for-each>
+                                </xsl:for-each>
+                            </div>
+                            <div class="title">
+                                <h3>Skills</h3>
+                            </div>
+                            <div class="description">
+                                <xsl:for-each select="skills">
+                                    <p>Expert: <xsl:value-of select="expert"/></p>
+                                    <p>Intermediate: <xsl:value-of select="intermediate"/></p>
+                                    <p>Software Engineering: <xsl:value-of select="software_engineering"/></p>
+                                    <p>Tools: <xsl:value-of select="tools"/></p>
                                 </xsl:for-each>
                             </div>
                         </div>
