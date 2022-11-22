@@ -38,9 +38,7 @@
                             </div>
                             <div class="description">
                                 <xsl:for-each select="personal">
-                                    <p>
-                                        <xsl:value-of select="description" />
-                                    </p>
+                                    <p><xsl:value-of select="description"/></p>
                                 </xsl:for-each>
                             </div>
                             <div class="title">
@@ -48,9 +46,21 @@
                             </div>
                             <div class="description">
                                 <xsl:for-each select="education">
-                                    <p>
-                                        <xsl:value-of select="school" />
-                                    </p>
+                                    <xsl:for-each select="school">
+                                        <p><xsl:value-of select="name"/>, <xsl:value-of select="address"/></p>
+                                        <p><xsl:value-of select="degree"/>, <xsl:value-of select="date"/></p>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                            </div>
+                            <div class="title">
+                                <h3>Work Experience</h3>
+                            </div>
+                            <div class="description">
+                                <xsl:for-each select="experience">
+                                    <xsl:for-each select="work">
+                                        <p><xsl:value-of select="organization"/> , <xsl:value-of select="title"/></p>
+                                        <p><xsl:value-of select="degree"/>, <xsl:value-of select="date"/></p>
+                                    </xsl:for-each>
                                 </xsl:for-each>
                             </div>
                         </div>

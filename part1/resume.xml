@@ -26,7 +26,7 @@ xsi:noNamespaceSchemaLocation="resume.xsd">
     <name>University of Alberta</name>
     <address>Edmonton, AB, Canada</address>
     <degree>Software Engineering</degree>
-    <date>2018-2023</date>
+    <date>2018 - 2023</date>
   </school>
 </education>
 
@@ -37,8 +37,7 @@ xsi:noNamespaceSchemaLocation="resume.xsd">
   <work>
     <title>CEO and Co-Founder</title>
     <organization>Maple Dating Inc.</organization>
-    <start>2019</start>
-    <finish>N/A</finish>
+    <date>2019 - N/A</date>
     <description>
 			Me and my Co-Founder began the work on a dating app in August 2019, we worked with a contractor to help us develop
 			the app as I did not have enough confidence in myself to take charge of the whole project and hire talented people to
@@ -56,36 +55,33 @@ xsi:noNamespaceSchemaLocation="resume.xsd">
   <work>
     <title>IT Assistant</title>
     <organization>Prilyx</organization>
-    <start>2019</start>
-    <finish>2019</finish>
+    <date>2019</date>
     <description>
 			Evaluated different techonology tools and developed a simple tutorial 
 			for new recruits.
 		</description>
   </work>
 
-  <extra_curriculum>
+  <work>
     <title>VP of Finance</title>
     <organization>University of Alberta Computer Engineering Club</organization>
-    <start>2020</start>
-    <finish>2021</finish>
+    <date>2020-2021</date>
     <description>
 			Handled finance and made a spread sheet for the budget regarding expenses and revenues for the club and allocated a
 			part of the budget for more social activities for students. Designed, surveyed, marketed, and negotiated the
 			merchandise on behalf of computer engineering students.
 		</description>
-  </extra_curriculum>
+  </work>
 
-  <extra_curriculum>
+  <work>
     <title>Software Engineer</title>
     <organization>UAARG (UAV Drones)</organization>
-    <start>2019</start>
-    <finish>2019</finish>
+    <date>2019</date>
     <description>
 			Worked with the Auto Pilot team using the Paparazzi UAV open-source software to help the UAV to navigate through
 			the desired checkpoints. We used the Dijkstras algorithm to help us with shortest path finding problems.
     </description>
-  </extra_curriculum>
+  </work>
 
 </experience>
 
