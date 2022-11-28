@@ -4,7 +4,7 @@ html {
 
 .body {
     margin: auto;
-    width: 90%;
+    width: 95%;
 }
 
 .description{
@@ -16,9 +16,19 @@ html {
     padding: 10px;
 }
 
+.second_menu {
+    float: right;
+}
+
 .personal, .description {
     display: inline-block;
 }
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
 
 .github{
     width: 100;
@@ -33,4 +43,10 @@ html {
 .email{
     width: 50;
     height: 50;
+}
+
+#logo{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
 }

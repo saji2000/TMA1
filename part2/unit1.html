@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Part 2</title>
+    <link rel="stylesheet" href="../shared/css/style.css" />
+
   </head>
   <body>
     <div class="body">
@@ -11,29 +13,114 @@
         <nav>
           <ul>
             <li><a href="../tma.htm">Home</a></li>
-            <li><a href="/part1/resume.xml">Part 1</a></li>
-            <li><a href="/part2/part2.html">Part 2</a></li>
-            <li><a href="/part3/part3.html">Part 3</a></li>
-            <li><a href="/part4/part4.html">Part 4</a></li>
+            <li><a href="../part1/resume.xml">Part 1</a></li>
+            <li><a href="part2.html">Part 2</a></li>
+            <li><a href="../part3/part3.html">Part 3</a></li>
+            <li><a href="../part4/part4.html">Part 4</a></li>
           </ul>
         </nav>
       </div>
       <div class="description">
-        <div class="title"><h3>Web Development Tutorial</h3></div>
-        <ul>
-          <li><a href="part2.html" id="intro">Introduction</a></li>
-          <li><a href="unit1.html" id="unit1">Unit 1</a></li>
-          <li><a id="unit2">Unit 2</a></li>
-          <li><a id="unit3">Unit 3</a></li>
-          <li><a id="quiz1">Quiz 1</a></li>
-          <li><a id="quiz2">Quiz 2</a></li>
-          <li><a id="quiz3">Quiz 3</a></li>
-        </ul>
+        <div class="title" id="second_menu"><h3>Web Development Tutorial</h3></div>
+        <nav></nav>
+            <ul>
+            <li><a href="part2.html" id="intro">Introduction</a></li>
+            <li><a href="unit1.html" id="unit1">Unit 1</a></li>
+            <li><a id="unit2">Unit 2</a></li>
+            <li><a id="unit3">Unit 3</a></li>
+            <li><a id="quiz1">Quiz 1</a></li>
+            <li><a id="quiz2">Quiz 2</a></li>
+            <li><a id="quiz3">Quiz 3</a></li>
+            </ul>
+        </nav>
       </div>
 
-      <div class="description">
+      <div>
         <h4>Unit 1 (HTML & CSS)</h4>
+        <img src="../shared/images/html.png" alt="html" id="logo"/>
+        <img src="../shared/images/css.png" alt="css" id="logo"/>
       </div>
+    </div>
+
+    <div>
+        <h3 class="center">HTML5</h3>
+        <div class="body">
+            <!-- <span class="description">
+                <img src="../shared/images/structure.jpeg" alt="structure" class="center"/>
+            </span> -->
+
+            <h4>nav:</h4>
+            <p>Simply defines navigation links and helps us navigate between different pages. &ltnav&gt Navigation Links &lt/nav&gt</p>
+
+            <h4>header:</h4>
+            <p>funstions as a header for a document or section of the page. &ltheader&gt Document Header &lt/header&gt</p>
+
+            <h4>footer:</h4>
+            <p>Basically acts as a footer for a document or section of the page. &ltfooter&gt Document Footer &lt/footer&gt</p>
+
+            <h4>section:</h4>
+            <p>This is where the general information of the page is usually stored. &ltsection&gt Document Footer &lt/section&gt</p>
+
+            <h4>article:</h4>
+            <p>Article is where the more detailed information about the page is stored. &ltarticle&gt Document Footer &lt/article&gt</p>
+
+            <h4>Input Type Text:</h4>
+            <p>Takes the text from the user through the input form</p>
+            <form>
+                <label>Name:</label><br>
+                <input type="text"><br>
+            </form>
+
+            <p>html text: &ltform&gt
+                &ltlabel&gtName:&lt/label&gt&ltbr&gt
+                &ltinput type="text"&gt&ltbr&gt
+            &lt/form&gt</p>
+
+            <h4>Input Type Password:</h4>
+            <p>Takes the password from the user through the input form and hides it</p>
+            <form>
+                <label>Password:</label><br>
+                <input type="password"><br>
+            </form>
+
+            <p>html text: &ltform&gt
+                &ltlabel&gtPassword:&lt/label&gt&ltbr&gt
+                &ltinput type="password"&gt&ltbr&gt
+            &lt/form&gt</p>
+
+            <h4>Input Type Submit:</h4>
+            <p>A submit button which would be configured to trigger a submission of the form</p>
+            <form>
+                <input type="submit" value="Submit"><br>
+            </form>
+
+            <p>html text: &ltform&gt
+                &ltinput type="submit" value="Submit"&gt&ltbr&gt
+            &lt/form&gt</p>
+
+            <h4>Input Type Radio:</h4>
+            <p>You can only choose one of the radio buttons</p>
+            <form>
+                <label>Choose your favorite unit:</label><br>
+                <input type="radio" value="unit1">
+                <label>Unit 1 (HTML & CSS)</label><br>
+                <input type="radio" value="unit2">
+                <label>Unit 2 (JavaScript)</label><br>
+                <input type="radio" value="unit2">
+                <label>Unit 2 (XML and Ajax)</label><br>
+            </form>
+
+            <p>html text: &ltform&gt
+                &ltlabel&gtChoose your favorite unit:&lt/label&gt&ltbr&gt
+                &ltinput type="radio" value="unit1"&gt
+                &ltlabel&gtUnit 1 (HTML & CSS)&lt/label&gt&ltbr&gt
+                &ltinput type="radio" value="unit2"&gt
+                &ltlabel&gtUnit 2 (JavaScript)&lt/label&gt&ltbr&gt
+                &ltinput type="radio" value="unit2"&gt
+                &ltlabel&gtUnit 2 (XML and Ajax)&lt/label&gt&ltbr&gt
+            &lt/form&gt</p>
+
+        </div>
     </div>
   </body>
 </html>
