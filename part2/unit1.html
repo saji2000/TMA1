@@ -43,8 +43,15 @@
     </div>
 
     <div>
-        <h3 class="center">HTML5</h3>
+        
         <div class="body">
+            <h3 class="center">HTML5</h3>
+            <p>HTML stands for Hyper Text Markup Language.
+                It is the standard markup language for creating Web pages
+                HTML describes the structure of a Web page
+                and consists of a series of elements.
+                HTML elements tell the browser how to display the content
+                also its elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</p>
             <!-- <span class="description">
                 <img src="../shared/images/structure.jpeg" alt="structure" class="center"/>
             </span> -->
@@ -102,12 +109,12 @@
             <p>You can only choose one of the radio buttons</p>
             <form>
                 <label>Choose your favorite unit:</label><br>
-                <input type="radio" value="unit1">
-                <label>Unit 1 (HTML & CSS)</label><br>
-                <input type="radio" value="unit2">
-                <label>Unit 2 (JavaScript)</label><br>
-                <input type="radio" value="unit2">
-                <label>Unit 2 (XML and Ajax)</label><br>
+                <input type="radio" name="action" value="unit1">
+                <label for="html">Unit 1 (HTML & CSS)</label><br>
+                <input type="radio" name="action" value="unit2">
+                <label for="javascript">Unit 2 (JavaScript)</label><br>
+                <input type="radio" name="action" value="unit2">
+                <label for="xml">Unit 2 (XML and Ajax)</label><br>
             </form>
 
             <p>html text: &ltform&gt
@@ -119,6 +126,71 @@
                 &ltinput type="radio" value="unit2"&gt
                 &ltlabel&gtUnit 2 (XML and Ajax)&lt/label&gt&ltbr&gt
             &lt/form&gt</p>
+
+            <h4>Input Type Checkbox:</h4>
+            <p>You can choose zero or more of the boxes</p>
+            <form>
+                <label>Choose your favorite unit:</label><br>
+                <input type="checkbox" value="unit1">
+                <label>Unit 1 (HTML & CSS)</label><br>
+                <input type="checkbox" value="unit2">
+                <label>Unit 2 (JavaScript)</label><br>
+                <input type="checkbox" value="unit2">
+                <label>Unit 2 (XML and Ajax)</label><br>
+            </form>
+
+            <p>html text: &ltform&gt
+                &ltlabel&gtChoose your favorite unit:&lt/label&gt&ltbr&gt
+                &ltinput type="checkbox" value="unit1"&gt
+                &ltlabel&gtUnit 1 (HTML & CSS)&lt/label&gt&ltbr&gt
+                &ltinput type="checkbox" value="unit2"&gt
+                &ltlabel&gtUnit 2 (JavaScript)&lt/label&gt&ltbr&gt
+                &ltinput type="checkbox" value="unit2"&gt
+                &ltlabel&gtUnit 2 (XML and Ajax)&lt/label&gt&ltbr&gt
+            &lt/form&gt</p>
+
+            <h4>Input Type Color:</h4>
+            <p>You can select a color</p>
+            <form>
+                <label for="favcolor">Select your favorite color:</label>
+                <input type="color" id="favcolor" name="favcolor">
+            </form>
+
+            <h3 class="center">CSS</h3>
+
+            <p>CSS stands for Cascading Style Sheets
+                and describes how HTML elements are to be displayed on screen, paper, or in other media.
+                CSS saves a lot of work. It can control the layout of multiple web pages all at once
+                External stylesheets are stored in CSS files</p>
+
+            <h4>Text Color:</h4>
+            <p>"color" attribute specifies the color of text</p>
+
+            <p id="blue">my color is blue!</p>
+
+            <p>css text: color: blue;</p>
+
+
+            <h4>Background Color:</h4>
+            <p>"background-color" attribute specifies the background color of text</p>
+
+            <p id="grey">my background color is grey!</p>
+
+            <p>css text: background-color: grey;</p>
+
+            <h4>Border Color:</h4>
+            <p>"border-color" attribute specifies the border color of text, note that we must also include the border size</p>
+
+            <p id="red_border">my border color is red!</p>
+
+            <p>css text: border: 2px solid red;</p>
+
+            <h4>Text Font Family:</h4>
+            <p>"font-family" attribute specifies the family of the font</p>
+
+            <p id="roman">Times new roman font!</p>
+
+            <p>css text: font-family: "Times New Roman", Times, serif;</p>
 
         </div>
     </div>
