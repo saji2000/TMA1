@@ -8,9 +8,6 @@
             </head>
             <header>
                 <div>
-                  <!-- <div>
-                    <img src="../shared/images/github.png" alt="logo" class="github"></img>
-                  </div> -->
                     <h1>Menu</h1>
                   <nav>
                     <ul>
