@@ -37,8 +37,8 @@
 
       <div>
         <h4>Unit 3 (XML and Ajax)</h4>
-        <img src="../shared/images/xml.png" alt="javascript" id="logo"/>
-        <img src="../shared/images/ajax.jpeg" alt="javascript" id="logo"/>
+        <img src="../shared/images/xml.png" alt="xml" id="logo"/>
+        <img src="../shared/images/ajax.jpeg" alt="ajax" id="logo"/>
 
       </div>
     </div>
@@ -50,51 +50,37 @@
             <p>Extensible Markup Language (XML) is a markup language and file format for storing, transmitting, and reconstructing arbitrary data. 
                 It defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.</p>
             
-            <h4>Variables</h4>
-            <p>Different Variable Declarations:</p>
-            <ul>
-                <li>var: variable</li>
-                <li>let: variable which the type cannot change</li>
-                <li>cont: contant type</li>
-            </ul>
-            <p>You can declare a variable by simply writing the following: var a = 1; By doing this we are assinging the value 1 to variable a.</p>
-            <p>Any type of data can be assigned using this method including strings. For example, var s = "Hello World!";</p>
+            <h4>Example of xml code (Figure 1)</h4>
+            <img src="../shared/images/xml_example.png" alt="xml_code" class="image"/>
+
+            <p>Most important aspect of using XML is that it is reusable, compared to HTML it saves a lot of time while developing a web page</p>
             
 
-            <h4>Operators</h4>
-            <p>Different Operators:</p>
+            <h4>XML Elements</h4>
+            <p>Different Elements:</p>
             <ul>
-                <li>+: addition</li>
-                <li>-: subtraction</li>
-                <li>*: multiplication</li>
-                <li>/: division</li>
+                <li>text</li>
+                <li>attributes</li>
+                <li>other attributes</li>
+                <li>mix of all</li>
             </ul>
-            <p>Example var a = 1; var b = -1; var c = a + b;</p>
-            <p>In this simple arithmetic operation we get that c = 0!</p>
+            <p>For example in figure 1, "Edmonton, AB, Canada" is a text so &ltaddress&gt has a text content</p>
+            <p>&ltpersonal&gt has an element content since it entails other elements. And &ltxml&gt has a "version" attribute</p>
 
-            <h4>Arrays</h4>
-            <p>We can have a list of variables by using arrays. For example, we can have a list of colors:</p>
-            <p>const colors = ["red", "green", "blue", "purple"]</p>
+            
 
-            <h4>If Else Statements</h4>
-            <p>Imagine a simple case which you want your program to work differently based on different conditions, we do this using if else statements</p>
-            <p>For example, if a > 0 I want to assing the value 1 to b otherwise 0</p>
-            <p>We write the following code:  if(a > 0) { b = 1 } else { b = 0 }</p>
+            <h4>XSL</h4>
+            <p>XSLT (eXtensible Stylesheet Language Transformations) is the recommended style sheet language for XML.
+                XSLT is far more sophisticated than CSS. With XSLT you can add/remove elements and attributes to or from the output file. You can also rearrange and sort elements, perform tests and make decisions about which elements to hide and display, and a lot more.
+                XSLT uses XPath to find information in an XML document.</p>
+            <img src="../shared/images/xsl.png" alt="xsl" class="image"/>
 
-            <h4>For Loops</h4>
-            <p>When we want to iterate over a sequence and perform a certain action, we use for loops. For example, if I want to write "Hello World!" 5 times to the console, we do the following:</p>
-            <p>for(var i = 0; i &lt 5; i++){ console.log("Hello World!") }</p>
+            <h4>XML Http Request</h4>
+            <p>The XMLHttpRequest object can be used to request data from a web server. It's very useful since you
+                Update a web page without reloading the page. An example of this:</p>
+            <img src="../shared/images/https.png" alt="https" class="image"/>
 
-            <h4>Functions</h4>
-            <p>Functions basically can take an input and perform an action. For example, if I want to add 1 to the input:</p>
-            <p>function add_one(n){ return n + 1; } add_one(1), this statement would return the value 2 to us!</p>
-
-            <h4>Objects</h4>
-            <p>We can define an object and give it many properties. For example, a car that has a certain color, speed, price.</p>
-            <p>const car = {speed:"150", price:"50,000$", color:"white"};</p>
-            <p>We can access these properties by simply writing this: car.price!</p>
-
-
+            <h3 class="center">Ajax</h3>
         </div>
     </div>
   </body>

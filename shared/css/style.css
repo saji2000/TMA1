@@ -44,6 +44,12 @@ html {
     height: 100px;
 }
 
+.image{
+    padding: 10px;
+    width: 90%;
+    height: 20%;
+}
+
 #blue{
     color: blue;
 }
