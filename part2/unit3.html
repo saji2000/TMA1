@@ -67,6 +67,10 @@
             <p>For example in figure 1, "Edmonton, AB, Canada" is a text so &ltaddress&gt has a text content</p>
             <p>&ltpersonal&gt has an element content since it entails other elements. And &ltxml&gt has a "version" attribute</p>
 
+            <h4>XSD</h4>
+            <p>XSD (XML Schema Definition), a recommendation of the World Wide Web Consortium (W3C), specifies how to formally describe the elements in an Extensible Markup Language (XML) document. 
+                It can be used by programmers to verify each piece of item content in a document, to assure it adheres to the description of the element it is placed in.</p>
+            <img src="../shared/images/xsd.png" alt="xsl" class="image"/>
             
 
             <h4>XSL</h4>
@@ -75,12 +79,36 @@
                 XSLT uses XPath to find information in an XML document.</p>
             <img src="../shared/images/xsl.png" alt="xsl" class="image"/>
 
-            <h4>XML Http Request</h4>
+            
+
+            <h3 class="center">Ajax</h3>
+            <p>Ajax  is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously 
+                (in the background) without interfering with the display and behaviour of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, 
+                to change content dynamically without the need to reload the entire page.</p>
+            
+            <h4>Https Request</h4>
             <p>The XMLHttpRequest object can be used to request data from a web server. It's very useful since you
                 Update a web page without reloading the page. An example of this:</p>
             <img src="../shared/images/https.png" alt="https" class="image"/>
 
-            <h3 class="center">Ajax</h3>
+
+            <ul>
+                <li>new XMLHttpRequest(): Creates a new XMLHttpRequest object</li>
+                <li>abort(): Cancels the current request</li>
+                <li>getAllResponseHeaders(): Returns header information</li>
+                <li>getResponseHeader(): Returns specific header information</li>
+                <li>open(method,url,async,user,psw): Specifies the request
+                    method: the request type GET or POST
+                    url: the file location
+                    async: true (asynchronous) or false (synchronous)
+                    user: optional user name
+                    psw: optional password</li>
+                <li>send(): Sends the request to the server, used for GET requests</li>
+                <li>send(string): Sends the request to the server, used for POST requests</li>
+                <li>setRequestHeader(): Adds a label/value pair to the header to be sent</li>
+
+
+            </ul>
         </div>
     </div>
   </body>
