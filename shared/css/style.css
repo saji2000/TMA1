@@ -86,3 +86,8 @@ html {
 #align_center{
     text-align: center;
 }
+
+.quiz{
+    line-height: 3.5em;
+    font-size: 18px;
+}
