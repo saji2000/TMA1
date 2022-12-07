@@ -86,7 +86,7 @@ function load_questions(j) {
 
 function check_next(next) {
 
-    // if the user has pressed the back buttonf
+    // if the user has pressed the back button
     if(!next){
         if (i + 1 == questions.length){
             document.getElementById("next_button").innerHTML = "next";
