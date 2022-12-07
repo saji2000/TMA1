@@ -28,7 +28,7 @@ var questions = [
         "option_1" : "O1: Cascading Style Sheets",
         "option_2" : "O2: Classic Style Sheets",
         "option_3" : "O3: Custom Style Sheets",
-        "option_4" : "o4: Cascading Style Shape",
+        "option_4" : "O4: Cascading Style Shape",
         "answer" : "O1: Cascading Style Sheets"
       },
     {
