@@ -1,51 +1,51 @@
 var questions = [
     {
-        "question" : "Roughly how many percent of websites use JavaScript?",
-        "option_1" : "O1: 38%",
-        "option_2" : "O2: 49%",
-        "option_3" : "O3: 82%",
-        "option_4" : "O4: 98%",
-        "answer" : "O4: 98%"
+        "question" : "What does XML stand for?",
+        "option_1" : "O1: Extensible Markup Language",
+        "option_2" : "O2: Excess Markup Language",
+        "option_3" : "O3: Extensible Machine Language",
+        "option_4" : "O4: Extensible Machine Line",
+        "answer" : "O1: Extensible Markup Language"
     },
     {
-        "question" : "Which one is not a way to declare a variable?",
-        "option_1" : "O1: var",
-        "option_2" : "O2: int",
-        "option_3" : "O3: const",
-        "option_4" : "O4: let",
-        "answer" : "O2: int"
+        "question" : "Most important reason for using XML instead of HTML?",
+        "option_1" : "O1: Lower level language and faster compile time",
+        "option_2" : "O2: Simpler language syntax",
+        "option_3" : "O3: Reusability of the code",
+        "option_4" : "O4: More established in the industry",
+        "answer" : "O3: Reusability of the code"
     },
     {
-        "question" : "Which one is the operator for multiplication?",
-        "option_1" : "O1: &",
-        "option_2" : "O2: #",
-        "option_3" : "O3: *",
-        "option_4" : "O4: x",
-        "answer" : "O3: *"
+        "question" : "Best way to apply styling to XML elements?",
+        "option_1" : "O1: XSD",
+        "option_2" : "O2: XSL",
+        "option_3" : "O3: In-line styling",
+        "option_4" : "O4: Javascript",
+        "answer" : "O2: XSL"
       },
     {
-        "question" : "Which one is the correct way to declare an array called \"a\" with element 1 and 2?",
-        "option_1" : "O1: array a = [1, 2]",
-        "option_2" : "O2: let a = [1, 2]",
-        "option_3" : "O3: var a = [1, 2]",
-        "option_4" : "O4: const a = [1, 2]",
-        "answer" : "O4: const a = [1, 2]"
+        "question" : "What is Ajax?",
+        "option_1" : "O1: Ajax  is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications.",
+        "option_2" : "O2: Ajax  is a set of frameworks that uses various web technologies on the client-side to create asynchronous web applications.",
+        "option_3" : "O3: Ajax  is a set of development techniques that uses various web technologies on the server-side to create synchronous mobile applications.",
+        "option_4" : "O4: Ajax  is a set of programming languages that uses various web technologies on the client-side to create asynchronous web applications.",
+        "answer" : "O1: Ajax  is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications."
       },
     {
-        "question" : "Which for loop is correct?",
-        "option_1" : "O1: for(int i = 0; i < n; i++{...}",
-        "option_2" : "O2: while(int i = 0; i < n; i++{...}",
-        "option_3" : "O3: for(int i == 0; i < n; i++{...}",
-        "option_4" : "O4: for(int i = 0, i < n, i++{...}",
-        "answer" : "O1: for(int i = 0; i < n; i++{...}"
+        "question" : "What is Https Request?",
+        "option_1" : "O1: XMLHttpRequest is used to request data from a web server",
+        "option_2" : "O2: Https request helps with connecting to another file locally",
+        "option_3" : "O3: Https request is a function that creates a buffer between files",
+        "option_4" : "O4: XMLHttpsRequest creates a XML request for a css style file",
+        "answer" : "O1: XMLHttpRequest is used to request data from a web server"
     },
     {
-        "question" : "How can we change the element with id \"finish\" to \"goodbye\"?",
-        "option_1" : "O1: document.getElementById(finish).html = \"goodbye\"",
-        "option_2" : "O2: document.getElementById(\"finish\").html = goodbye",
-        "option_3" : "O3: element.getElementById(\"finish\").innerHTML = goodbye",
-        "option_4" : "O4: document.getElementById(\"finish\").innerHTML = \"goodbye\"",
-        "answer" : "O4: document.getElementById(\"finish\").innerHTML = \"goodbye\""
+        "question" : "What does setRequestHeader() do?",
+        "option_1" : "O1: Header is requested",
+        "option_2" : "O2: checks if HTML header has changed",
+        "option_3" : "O3: Adds a label/value pair to the footer to be sent",
+        "option_4" : "O4: Adds a label/value pair to the header to be sent",
+        "answer" : "O4: Adds a label/value pair to the header to be sent"
     },
 
 ];
