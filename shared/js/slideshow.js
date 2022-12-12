@@ -18,7 +18,6 @@ function start(){
   document.getElementById("forward_button").addEventListener("click", forward_show, false);
 
 //   document.getElementById("random_button").addEventListener("click", changeSequence, false);
-//   console.log("here");
 
   load_images();
 }
@@ -41,14 +40,14 @@ function load_images(){
 function start_show(){
     index = 0;
     document.getElementById('start_button').disabled = true;
-    timer = setInterval(slide_show, 1000);
+    timer = setInterval(slide_show, 4000);
     slide_show();
 }
 
 // continuing the show
 function slide_show(){
     load_image_caption(images[index]);
-    if(index == images.length - 1){
+    if(index == images.length){
         document.getElementById('start_button').disabled = false;
         clearInterval(timer);
         index = 0;
@@ -67,26 +66,26 @@ function stop_show(){
 // shows the next slide in order
 function forward_show(){
 
-    if(index >= images.length - 1){
+    if(index == images.length - 1){
         index = 0;
     }
     else{
         index++;
     }
-
+    console.log("forward index: " + index);
     load_image_caption(images[index]);
 }
 
 // shows the previous slide in order
 function back_show(){
 
-    if(index < 0){
+    if(index < 1){
         index = images.length - 1;
     }
     else{
         index--;
     }
-
+    console.log("back ward index: " + index)
     load_image_caption(images[index]);
 }
 
