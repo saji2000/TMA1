@@ -27,7 +27,20 @@
             <button id="stop_button" class="button">Stop</button>
             <button id="back_button" class="button">Back</button>
             <button id="forward_button" class="button">Forward</button>
-            <button id="random_button" class="button">Random</button>
+
+            <label for="transitions">Order: </label>
+            <select name="order" id="order" class="select">
+              <option>Sequential</option>
+              <option>Random</option>
+            </select>            
+            
+            <label for="transitions">Transitions: </label>
+            <select name="transitions" id="transitions" class="select">
+              <option value="none">None</option>
+              <option value="fade">Fade Out</option>
+              <option value="shrink">Shrink Image</option>
+              <option value="wipe">Wipe</option>
+            </select>
         </div>
 
         <div class="center">

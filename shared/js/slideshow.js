@@ -1,11 +1,10 @@
 var images;
 var index = 0;
-var border = 10;
-var continuing = true;
+var border = 5;
 var timer;
-// console.log("here");
-
-
+var seq = true;
+var order;
+var current_transition = "none";
 
 var canvas = document.getElementById('slideshow');
 var ctx = canvas.getContext('2d');
@@ -17,7 +16,10 @@ function start(){
   document.getElementById("back_button").addEventListener("click", back_show, false);
   document.getElementById("forward_button").addEventListener("click", forward_show, false);
 
-//   document.getElementById("random_button").addEventListener("click", changeSequence, false);
+    document.getElementById("order").addEventListener("change", (event) => {change_order(event.target.text);}, false);
+
+  document.getElementById("transitions").addEventListener("change", (event) => {change_transition(event.target.value);}, false);
+
 
   load_images();
 }
@@ -46,15 +48,24 @@ function start_show(){
 
 // continuing the show
 function slide_show(){
+
     load_image_caption(images[index]);
-    if(index == images.length){
-        document.getElementById('start_button').disabled = false;
-        clearInterval(timer);
-        index = 0;
+
+    if(seq){
+        if(index == images.length){
+            document.getElementById('start_button').disabled = false;
+            clearInterval(timer);
+            index = 0;
+        }
+        else{
+            index++;
+        }
     }
     else{
-        index++;
+        index = Math.floor(Math.random() * 20);
     }
+
+    
 }
 
 // stops the ongoing show
@@ -99,7 +110,14 @@ function load_image_caption(img){
   image.onload = function(){ 
     canvas.width = image.naturalWidth+border;
     canvas.height = image.naturalHeight+border;
+
+    canvas.classList.add(current_transition);
+
     ctx.drawImage(image, 0, 0);
+
+    canvas.classList.remove(current_transition);
+
+    
     ctx.strokeStyle = '#7d8c99';
     ctx.lineWidth = 10;
     ctx.strokeRect(border/2, border/2, canvas.width-border, canvas.height-border);
@@ -112,5 +130,32 @@ function load_image_caption(img){
   document.getElementById("caption").innerHTML = img.caption;
 
 }
+
+// changes the order of showing the slides
+function change_order(order){
+    
+  if(order == "Sequential"){
+    seq = true;
+    document.getElementById('forward_button').disabled = false;
+    document.getElementById('back_button').disabled = false;
+  }
+  else{
+    seq = false;
+    document.getElementById('forward_button').disabled = true;
+    document.getElementById('back_button').disabled = true;
+  }
+}
+
+function change_transition(transition){
+
+console.log(transition);
+
+  canvas.classList.remove(current_transition, current_transition+'-display');
+  current_transition = transition;
+  canvas.classList.add(current_transition+'-display');
+
+}
+
+
 
 window.addEventListener("load", start, false);
