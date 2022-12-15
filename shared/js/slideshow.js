@@ -6,7 +6,7 @@ var seq = true;
 var order;
 var current_transition = "none";
 
-var canvas = document.getElementById('slideshow');
+var canvas = document.getElementById('slide_show');
 var ctx = canvas.getContext('2d');
 
 function start(){
@@ -16,7 +16,7 @@ function start(){
   document.getElementById("back_button").addEventListener("click", back_show, false);
   document.getElementById("forward_button").addEventListener("click", forward_show, false);
 
-    document.getElementById("order").addEventListener("change", (event) => {change_order(event.target.text);}, false);
+    document.getElementById("order").addEventListener("change", (event) => {change_order(event.target.value);}, false);
 
   document.getElementById("transitions").addEventListener("change", (event) => {change_transition(event.target.value);}, false);
 
@@ -42,7 +42,7 @@ function load_images(){
 function start_show(){
     index = 0;
     document.getElementById('start_button').disabled = true;
-    timer = setInterval(slide_show, 4000);
+    timer = setInterval(slide_show, 3500);
     slide_show();
 }
 
@@ -64,8 +64,6 @@ function slide_show(){
     else{
         index = Math.floor(Math.random() * 20);
     }
-
-    
 }
 
 // stops the ongoing show
@@ -111,14 +109,16 @@ function load_image_caption(img){
     canvas.width = image.naturalWidth+border;
     canvas.height = image.naturalHeight+border;
 
-    canvas.classList.add(current_transition);
+    setTimeout(function() {
+          canvas.classList.add(current_transition);
+      }, 2500);
 
     ctx.drawImage(image, 0, 0);
 
     canvas.classList.remove(current_transition);
 
     
-    ctx.strokeStyle = '#7d8c99';
+    ctx.strokeStyle = '#832C5D';
     ctx.lineWidth = 10;
     ctx.strokeRect(border/2, border/2, canvas.width-border, canvas.height-border);
   };
@@ -134,11 +134,12 @@ function load_image_caption(img){
 // changes the order of showing the slides
 function change_order(order){
     
-  if(order == "Sequential"){
+  if(order == "sequential"){
     seq = true;
     document.getElementById('forward_button').disabled = false;
     document.getElementById('back_button').disabled = false;
   }
+
   else{
     seq = false;
     document.getElementById('forward_button').disabled = true;
@@ -146,13 +147,12 @@ function change_order(order){
   }
 }
 
+// changing the transtion of the slides
 function change_transition(transition){
 
-console.log(transition);
-
-  canvas.classList.remove(current_transition, current_transition+'-display');
-  current_transition = transition;
-  canvas.classList.add(current_transition+'-display');
+    canvas.classList.remove(current_transition, current_transition+'_transition');
+    current_transition = transition;
+    canvas.classList.add(current_transition+'_transition');
 
 }
 

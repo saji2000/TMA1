@@ -29,22 +29,22 @@
             <button id="forward_button" class="button">Forward</button>
 
             <label for="transitions">Order: </label>
-            <select name="order" id="order" class="select">
-              <option>Sequential</option>
-              <option>Random</option>
+            <select name="order" id="order">
+              <option value="sequential">Sequential</option>
+              <option value="random">Random</option>
             </select>            
             
             <label for="transitions">Transitions: </label>
-            <select name="transitions" id="transitions" class="select">
+            <select name="transitions" id="transitions">
               <option value="none">None</option>
-              <option value="fade">Fade Out</option>
-              <option value="shrink">Shrink Image</option>
               <option value="wipe">Wipe</option>
+              <option value="fade">Fade</option>
+              <option value="shrink">Shrink</option>
             </select>
         </div>
 
         <div class="center">
-            <canvas id="slideshow" width="800px" height="500px"></canvas>
+            <canvas id="slide_show" width="800px" height="500px"></canvas>
             <h4 id="caption"></h4>
         </div>
 

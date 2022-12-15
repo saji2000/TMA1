@@ -143,8 +143,8 @@ function check_next(next) {
         document.getElementById('question_6').innerHTML="Question 6: " + questions[5].question;
         document.getElementById('answer_6').innerHTML="Answer 6: "+ questions[5].answer;
 
-        document.getElementById("back_button").remove();
-        document.getElementById("next_button").remove();
+        document.getElementById("back_button").disabled = true;
+        document.getElementById("next_button").disabled = true;
     }
     
     load_questions(i);
