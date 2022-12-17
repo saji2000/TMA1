@@ -94,31 +94,29 @@ html {
 
 .button{
     padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#slide_show.fade-transition {
+    opacity: 1;
+    transition: opacity 1.5s;
 }
 
 #slide_show.fade {
     opacity: 0;
 }
 
+#slide_show.shrink-transition {
+    transform: scaleY(1);
+    transition: transform 1.5s;
+}
 #slide_show.shrink {
     transform: scaleY(0);
 }
 
+#slide_show.wipe-transition {
+    transition: transform 1.5s;
+}
 #slide_show.wipe {
     transform: translate(200%);
 }
-
-#slide_show.fade_transition {
-    opacity: 1;
-    transition: opacity 1s;
-}
-
-#slide_show.shrink_transition {
-    transform: scaleY(1);
-    transition: transform 1s;
-}
-
-#slide_show.wipe_transition {
-    transition: transform 1s;
-}
-

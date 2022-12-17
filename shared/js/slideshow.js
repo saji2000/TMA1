@@ -5,26 +5,23 @@ var timer;
 var seq = true;
 var order;
 var current_transition = "none";
-
+var continuing = true;
 var canvas = document.getElementById('slide_show');
 var ctx = canvas.getContext('2d');
 
 function start(){
 
-  document.getElementById("start_button").addEventListener("click", start_show, false);
-  document.getElementById("stop_button").addEventListener("click", stop_show, false);
-  document.getElementById("back_button").addEventListener("click", back_show, false);
-  document.getElementById("forward_button").addEventListener("click", forward_show, false);
-
+    document.getElementById("start_button").addEventListener("click", start_show, false);
+    document.getElementById("stop_button").addEventListener("click", stop_show, false);
+    document.getElementById("back_button").addEventListener("click", back_show, false);
+    document.getElementById("forward_button").addEventListener("click", forward_show, false);
     document.getElementById("order").addEventListener("change", (event) => {change_order(event.target.value);}, false);
+    document.getElementById("transitions").addEventListener("change", (event) => {change_transition(event.target.value);}, false);
 
-  document.getElementById("transitions").addEventListener("change", (event) => {change_transition(event.target.value);}, false);
-
-
-  load_images();
+    load_json();
 }
 
-function load_images(){
+function load_json(){
   var xhr = new XMLHttpRequest();
 
   xhr.open('GET', '../shared/images/pics.json', true);
@@ -40,9 +37,10 @@ function load_images(){
 
 // begins the show
 function start_show(){
+    continuing = true;
     index = 0;
     document.getElementById('start_button').disabled = true;
-    timer = setInterval(slide_show, 3500);
+    timer = setInterval(slide_show, 5000);
     slide_show();
 }
 
@@ -68,6 +66,7 @@ function slide_show(){
 
 // stops the ongoing show
 function stop_show(){
+    continuing = false;
     document.getElementById('start_button').disabled = false;
     clearInterval(timer);
 }
@@ -81,7 +80,6 @@ function forward_show(){
     else{
         index++;
     }
-    console.log("forward index: " + index);
     load_image_caption(images[index]);
 }
 
@@ -94,30 +92,27 @@ function back_show(){
     else{
         index--;
     }
-    console.log("back ward index: " + index)
     load_image_caption(images[index]);
 }
-
-
 
 // loads the image and the caption
 function load_image_caption(img){
 
-  var image = new Image();
-  console.log("in load image function");
-  image.onload = function(){ 
+    var image = new Image();
+    image.onload = function(){ 
     canvas.width = image.naturalWidth+border;
     canvas.height = image.naturalHeight+border;
-
+    
     setTimeout(function() {
-          canvas.classList.add(current_transition);
-      }, 2500);
-
+        if(continuing){
+            canvas.classList.add(current_transition);
+        }
+    }, 3500);  
+    
     ctx.drawImage(image, 0, 0);
 
     canvas.classList.remove(current_transition);
 
-    
     ctx.strokeStyle = '#832C5D';
     ctx.lineWidth = 10;
     ctx.strokeRect(border/2, border/2, canvas.width-border, canvas.height-border);
@@ -125,10 +120,8 @@ function load_image_caption(img){
 
   image.src = img.address;
 
-
   // loading the caption
   document.getElementById("caption").innerHTML = img.caption;
-
 }
 
 // changes the order of showing the slides
@@ -150,12 +143,11 @@ function change_order(order){
 // changing the transtion of the slides
 function change_transition(transition){
 
-    canvas.classList.remove(current_transition, current_transition+'_transition');
+    canvas.classList.remove(current_transition, current_transition+'-transition');
     current_transition = transition;
-    canvas.classList.add(current_transition+'_transition');
+    canvas.classList.add(current_transition+'-transition');
 
 }
-
 
 
 window.addEventListener("load", start, false);
