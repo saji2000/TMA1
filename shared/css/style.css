@@ -97,9 +97,9 @@ html {
     margin-top: 10px;
 }
 
-#convertor{
-    margin: 10px;
-}
+/* #convertor{
+    margin-top: 10px;
+} */
 
 #slide_show.fade-transition {
     opacity: 1;

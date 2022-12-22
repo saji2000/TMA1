@@ -16,7 +16,7 @@ function start(){
 
 }
 
-function load_app(address){
+function load_app(address, register_events){
 
     console.log("load app");
 
@@ -29,22 +29,14 @@ function load_app(address){
         if(this.status == 200) 
         {
             document.getElementById('app').innerHTML = this.responseText;
-            var parser = new DOMParser();
-            responseDoc = parser.parseFromString (this.responseText, "text/html");
-            console.log(responseDoc.getElementById("length_button"));
-
-            document.getElementById("length_button").addEventListener("click", length, false);
-            // document.getElementById("weight_button").addEventListener("click", weight, false);
-            // document.getElementById("area_button").addEventListener("click", area, false);
-            // document.getElementById("volume_button").addEventListener("click", volume, false);
-
+            register_events();
         }
     }
 
     xhr.send();
 }
 
-function load_convertor(address){
+function load_convertor(address, register_events){
 
     console.log("load convertor");
 
@@ -59,12 +51,8 @@ function load_convertor(address){
         document.getElementById('convertor').innerHTML = this.responseText;
         var parser = new DOMParser();
         responseDoc = parser.parseFromString (this.responseText, "text/html");
-
-        document.getElementById("meter").addEventListener("input", compute_meter, false);
-        document.getElementById("kilometer").addEventListener("input", compute_kilometer, false);
-        document.getElementById("centimeter").addEventListener("input", compute_centimeter, false);
-        document.getElementById("inch").addEventListener("input", compute_inch, false);
-        document.getElementById("feet").addEventListener("change", compute_feet, false);
+        
+        register_events();
 
         }
     }
@@ -73,15 +61,31 @@ function load_convertor(address){
 
 function measurement(){
 
-    load_app("measurement.html");
+    load_app("measurement.html", register_measurement_events);
 
+}
+
+function register_measurement_events(){
+
+    document.getElementById("length_button").addEventListener("click", length, false);
+    document.getElementById("weight_button").addEventListener("click", weight, false);
+    document.getElementById("area_button").addEventListener("click", area, false);
+    document.getElementById("volume_button").addEventListener("click", volume, false);
 }
 
 
 function length(){
 
-    load_convertor("length.html");
+    load_convertor("length.html", register_length_events);
     
+}
+
+function register_length_events(){
+    document.getElementById("meter").addEventListener("input", compute_meter, false);
+    document.getElementById("kilometer").addEventListener("input", compute_kilometer, false);
+    document.getElementById("centimeter").addEventListener("input", compute_centimeter, false);
+    document.getElementById("inch").addEventListener("input", compute_inch, false);
+    document.getElementById("feet").addEventListener("change", compute_feet, false);
 }
 
 function weight(){
