@@ -9,14 +9,13 @@ var number;
 
 function start(){
 
-    console.log("app started");
-
-
     document.getElementById("measurement_button").addEventListener("click", measurement, false);
 
 }
 
-function load_app(address, register_events){
+
+// loads the html on to part4.html
+function load_app(address, register_events, id){
 
     console.log("load app");
 
@@ -24,11 +23,9 @@ function load_app(address, register_events){
 
     xhr.open('GET', address, true);
 
-    xhr.onload = function()
-    {
-        if(this.status == 200) 
-        {
-            document.getElementById('app').innerHTML = this.responseText;
+    xhr.onload = function(){
+        if(this.status == 200){
+            document.getElementById(id).innerHTML = this.responseText;
             register_events();
         }
     }
@@ -36,35 +33,14 @@ function load_app(address, register_events){
     xhr.send();
 }
 
-function load_convertor(address, register_events){
-
-    console.log("load convertor");
-
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', address, true);
-
-    xhr.onload = function()
-    {
-        if(this.status == 200) 
-        {
-        document.getElementById('convertor').innerHTML = this.responseText;
-        var parser = new DOMParser();
-        responseDoc = parser.parseFromString (this.responseText, "text/html");
-        
-        register_events();
-
-        }
-    }
-    xhr.send();
-}
-
+// starting the measurement app
 function measurement(){
 
-    load_app("measurement.html", register_measurement_events);
+    load_app("measurement.html", register_measurement_events, "app");
 
 }
 
+// registering measurement events
 function register_measurement_events(){
 
     document.getElementById("length_button").addEventListener("click", length, false);
@@ -76,33 +52,44 @@ function register_measurement_events(){
 
 function length(){
 
-    load_convertor("length.html", register_length_events);
+    load_app("length.html", register_length_events, "convertor");
     
 }
 
 function register_length_events(){
+
     document.getElementById("meter").addEventListener("input", compute_meter, false);
     document.getElementById("kilometer").addEventListener("input", compute_kilometer, false);
     document.getElementById("centimeter").addEventListener("input", compute_centimeter, false);
     document.getElementById("inch").addEventListener("input", compute_inch, false);
-    document.getElementById("feet").addEventListener("change", compute_feet, false);
+    document.getElementById("feet").addEventListener("input", compute_feet, false);
+
 }
 
 function weight(){
 
-    load_convertor("weight.html");
+    load_app("weight.html", register_weight_events, "convertor");
     
+}
+
+function register_weight_events(){
+
+    document.getElementById("gram").addEventListener("input", compute_gram, false);
+    document.getElementById("kilogram").addEventListener("input", compute_kilogram, false);
+    document.getElementById("tonne").addEventListener("input", compute_tonne, false);
+    document.getElementById("ounce").addEventListener("input", compute_ounce, false);
+
 }
 
 function area(){
 
-    load_convertor("area.html");
+    load_app("area.html");
     
 }
 
 function volume(){
 
-    load_convertor("volume.html");
+    load_app("volume.html");
 
 }
 
@@ -111,7 +98,7 @@ function compute_meter(){
     number = document.getElementById("meter").value;
     document.getElementById("feet").value = (number * 3.281).toFixed(3);
     document.getElementById("centimeter").value = (number * 100).toFixed(3);
-    document.getElementById("kilometer").value = (number * 0.0001).toFixed(5);
+    document.getElementById("kilometer").value = (number * 0.001).toFixed(5);
     document.getElementById("inch").value = (number * 39.37).toFixed(3);
 
 }
