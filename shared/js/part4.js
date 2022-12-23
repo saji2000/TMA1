@@ -78,68 +78,28 @@ function register_weight_events(){
     document.getElementById("kilogram").addEventListener("input", compute_kilogram, false);
     document.getElementById("tonne").addEventListener("input", compute_tonne, false);
     document.getElementById("ounce").addEventListener("input", compute_ounce, false);
+    document.getElementById("pound").addEventListener("input", compute_pound, false);
+
 
 }
 
 function area(){
 
-    load_app("area.html");
+    load_app("area.html", register_area_events, "convertor");
     
+}
+
+function register_area_events(){
+
 }
 
 function volume(){
 
-    load_app("volume.html");
+    load_app("volume.html", register_volume_events, "convertor");
 
 }
 
-function compute_meter(){
-
-    number = document.getElementById("meter").value;
-    document.getElementById("feet").value = (number * 3.281).toFixed(3);
-    document.getElementById("centimeter").value = (number * 100).toFixed(3);
-    document.getElementById("kilometer").value = (number * 0.001).toFixed(5);
-    document.getElementById("inch").value = (number * 39.37).toFixed(3);
-
-}
-
-function compute_kilometer(){
-
-    number = document.getElementById("kilometer").value;
-    document.getElementById("feet").value = (number * 3281).toFixed(3);
-    document.getElementById("centimeter").value = (number * 100000).toFixed(3);
-    document.getElementById("meter").value = (number * 1000).toFixed(3);
-    document.getElementById("inch").value = (number * 39370).toFixed(3);
-
-}
-
-function compute_centimeter(){
-
-    number = document.getElementById("centimeter").value;
-    document.getElementById("feet").value = (number * .0328084).toFixed(5);
-    document.getElementById("kilometer").value = (number * 0.00001).toFixed(5);
-    document.getElementById("meter").value = (number * 0.01).toFixed(3);
-    document.getElementById("inch").value = (number * 0.393701).toFixed(5);
-
-}
-
-function compute_inch(){
-
-    number = document.getElementById("inch").value;
-    document.getElementById("feet").value = (number * 0.0833333).toFixed(5);
-    document.getElementById("kilometer").value = (number * 0.0000254).toFixed(5);
-    document.getElementById("meter").value = (number * 0.0254).toFixed(3);
-    document.getElementById("centimeter").value = (number * 2.54).toFixed(5);
-
-}
-
-function compute_feet(){
-
-    number = document.getElementById("feet").value;
-    document.getElementById("centimeter").value = (number * 30.48).toFixed(3);
-    document.getElementById("kilometer").value = (number * 0.0003048).toFixed(5);
-    document.getElementById("meter").value = (number * 0.3048).toFixed(5);
-    document.getElementById("inch").value = (number * 12).toFixed(5);
+function register_volume_events(){
 
 }
 
