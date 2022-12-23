@@ -91,6 +91,11 @@ function area(){
 
 function register_area_events(){
 
+    document.getElementById("s_meter").addEventListener("input", compute_s_meter, false);
+    document.getElementById("s_kilometer").addEventListener("input", compute_s_kilometer, false);
+    document.getElementById("s_feet").addEventListener("input", compute_s_feet, false);
+    document.getElementById("s_mile").addEventListener("input", compute_s_mile, false);
+
 }
 
 function volume(){
@@ -100,6 +105,11 @@ function volume(){
 }
 
 function register_volume_events(){
+
+    document.getElementById("c_meter").addEventListener("input", compute_c_meter, false);
+    document.getElementById("litre").addEventListener("input", compute_litre, false);
+    document.getElementById("gallon").addEventListener("input", compute_gallon, false);
+    document.getElementById("barrel").addEventListener("input", compute_barrel, false);
 
 }
 
