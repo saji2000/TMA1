@@ -150,31 +150,29 @@ function compute_c_meter(){
 
 }
 
-// done
-
 function compute_litre(){
 
     number = document.getElementById("litre").value;
     document.getElementById("c_meter").value = (number * 1000).toFixed(3);
-    document.getElementById("gallon").value = (number * 264.172).toFixed(3);
-    document.getElementById("barrel").value = (number * 6.28981).toFixed(3);
+    document.getElementById("gallon").value = (number * 0.264172).toFixed(4);
+    document.getElementById("barrel").value = (number * 0.00628981).toFixed(6);
     
 }
 
-function compute_c_meter(){
+function compute_gallon(){
 
-    number = document.getElementById("c_meter").value;
-    document.getElementById("litre").value = (number * 1000).toFixed(3);
-    document.getElementById("gallon").value = (number * 264.172).toFixed(3);
-    document.getElementById("barrel").value = (number * 6.28981).toFixed(3);
+    number = document.getElementById("gallon").value;
+    document.getElementById("litre").value = (number * 3.78541).toFixed(3);
+    document.getElementById("c_meter").value = (number * 0.00378541).toFixed(6);
+    document.getElementById("barrel").value = (number * 0.0238095).toFixed(6);
     
 }
 
-function compute_c_meter(){
+function compute_barrel(){
 
-    number = document.getElementById("c_meter").value;
-    document.getElementById("litre").value = (number * 1000).toFixed(3);
-    document.getElementById("gallon").value = (number * 264.172).toFixed(3);
-    document.getElementById("barrel").value = (number * 6.28981).toFixed(3);
+    number = document.getElementById("barrel").value;
+    document.getElementById("litre").value = (number * 158.98729).toFixed(3);
+    document.getElementById("gallon").value = (number * 42).toFixed(3);
+    document.getElementById("c_meter").value = (number * 0.158987).toFixed(4);
     
 }
