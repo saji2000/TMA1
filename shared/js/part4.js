@@ -10,6 +10,7 @@ var number;
 function start(){
 
     document.getElementById("measurement_button").addEventListener("click", measurement, false);
+    document.getElementById("mortgage_button").addEventListener("click", mortgage, false);
 
 }
 
@@ -33,7 +34,7 @@ function load_app(address, register_events, id){
     xhr.send();
 }
 
-// starting the measurement app
+// ------------------- Measurement App -------------------
 function measurement(){
 
     load_app("measurement.html", register_measurement_events, "app");
@@ -110,6 +111,94 @@ function register_volume_events(){
     document.getElementById("litre").addEventListener("input", compute_litre, false);
     document.getElementById("gallon").addEventListener("input", compute_gallon, false);
     document.getElementById("barrel").addEventListener("input", compute_barrel, false);
+
+}
+
+// ------------------- Mortgage App -------------------
+
+var f = 12;
+
+function mortgage(){
+
+    load_app("mortgage.html", register_mortgage_events, "app");
+
+}
+
+function register_mortgage_events(){
+
+    document.getElementById("loan_amount").addEventListener("blur", validate_loan_amount, false);
+    document.getElementById("down_payment").addEventListener("blur", validate_down_payment, false);
+    document.getElementById("interest_rate").addEventListener("blur", validate_interest_rate, false);
+    document.getElementById("loan_term").addEventListener("input", validate_loan_term, false);
+    document.getElementById("calculate").addEventListener("click", calculate, false); 
+
+}
+
+// validating the numbers
+
+function validate_loan_amount(){
+
+    number = document.getElementById("loan_amount").value;
+
+    if(number <= 0){
+        alert("Loan amount cannot be negative or zero!");
+        document.getElementById("loan_amount").value = -1 * number;
+    }
+
+}
+
+function validate_down_payment(){
+    
+    number = document.getElementById("down_payment").value;
+
+    if(number < 0){
+        alert("Down payment cannot be negative!");
+        document.getElementById("down_payment").value = -1 * number;
+    }
+}
+
+function validate_interest_rate(){
+    
+    number = document.getElementById("interest_rate").value;
+
+    if(number < 0){
+        alert("Interest rate cannot be negative!");
+        document.getElementById("interest_rate").value = -1 * number;
+    }
+
+}
+
+function validate_loan_term(){
+    number = document.getElementById("loan_term").value;
+
+    if(number <= 0){
+        alert("Loan term cannot be negative or zero!");
+        document.getElementById("loan_term").value = -1 * number;
+    }
+}
+
+function calculate(){
+
+    var p = document.getElementById("loan_amount").value;
+    var r = document.getElementById("interest_rate").value;
+    var t = document.getElementById("loan_term").value;
+    var d = document.getElementById("down_payment").value;
+    var f = document.getElementById('frequency').value;
+
+    var i = document.getElementById('frequency').selectedIndex;
+    var options = document.getElementById('frequency').options;
+    var frequency = options[i].text;
+
+    console.log(f);
+
+    p = p - d;
+
+    var ans = p * ((r/100)/f);
+    ans = (ans / (1 - (1 + r/100)**(- t * f))).toFixed(3);
+
+    console.log(document.getElementById("result"));
+
+    document.getElementById("result").innerHTML = frequency + " payment of $" + ans;
 
 }
 
