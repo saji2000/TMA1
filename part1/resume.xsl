@@ -7,7 +7,7 @@
                 <link rel="stylesheet" href="../shared/css/style.css" />
             </head>
             <header>
-                <div>
+                <div class = "body">
                     <h1>Menu</h1>
                   <nav>
                     <ul>

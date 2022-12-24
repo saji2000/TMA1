@@ -95,6 +95,7 @@ html {
 .button{
     padding: 10px 20px;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 #app {
@@ -104,6 +105,8 @@ html {
 #convertor{
     margin-top: 10px;
 }
+
+/* Transitions for part 3 */
 
 #slide_show.fade-transition {
     opacity: 1;
@@ -128,3 +131,6 @@ html {
 #slide_show.wipe {
     transform: translate(200%);
 }
+
+
+  

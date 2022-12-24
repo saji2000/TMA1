@@ -11,6 +11,7 @@ function start(){
 
     document.getElementById("measurement_button").addEventListener("click", measurement, false);
     document.getElementById("mortgage_button").addEventListener("click", mortgage, false);
+    document.getElementById("bmi_button").addEventListener("click", bmi, false);
 
 }
 
@@ -203,7 +204,7 @@ function calculate(){
 
     }
     else if(r == 0){
-        
+
         ans = (p / (t * f)).toFixed(3);
 
         document.getElementById("result").innerHTML = frequency + " payment of $" + ans;
@@ -220,7 +221,17 @@ function calculate(){
     }
 }
 
+// ------------------- BMI App -------------------
+
+function bmi(){
+
+    load_app("bmi.html", register_bmi_events, "app");
+
+}
+
+function register_bmi_events(){
 
 
+}
 
 window.addEventListener("load", start, false);
