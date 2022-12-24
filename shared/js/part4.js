@@ -117,6 +117,7 @@ function register_volume_events(){
 // ------------------- Mortgage App -------------------
 
 var f = 12;
+var ans;
 
 function mortgage(){
 
@@ -124,12 +125,14 @@ function mortgage(){
 
 }
 
+// registering the event listeners
+
 function register_mortgage_events(){
 
     document.getElementById("loan_amount").addEventListener("blur", validate_loan_amount, false);
     document.getElementById("down_payment").addEventListener("blur", validate_down_payment, false);
     document.getElementById("interest_rate").addEventListener("blur", validate_interest_rate, false);
-    document.getElementById("loan_term").addEventListener("input", validate_loan_term, false);
+    document.getElementById("loan_term").addEventListener("blur", validate_loan_term, false);
     document.getElementById("calculate").addEventListener("click", calculate, false); 
 
 }
@@ -177,6 +180,9 @@ function validate_loan_term(){
     }
 }
 
+
+// calculating the payment amount
+
 function calculate(){
 
     var p = document.getElementById("loan_amount").value;
@@ -189,17 +195,29 @@ function calculate(){
     var options = document.getElementById('frequency').options;
     var frequency = options[i].text;
 
-    console.log(f);
-
     p = p - d;
 
-    var ans = p * ((r/100)/f);
-    ans = (ans / (1 - (1 + r/100)**(- t * f))).toFixed(3);
+    if(p <= 0 || r < 0 || t <= 0 || d < 0){
 
-    console.log(document.getElementById("result"));
+        alert("Inputs wrong, please try again");
 
-    document.getElementById("result").innerHTML = frequency + " payment of $" + ans;
+    }
+    else if(r == 0){
+        
+        ans = (p / (t * f)).toFixed(3);
 
+        document.getElementById("result").innerHTML = frequency + " payment of $" + ans;
+
+    }
+    else{
+
+        ans = p * ((r/100)/f);
+
+        ans = (ans / (1 - (1 + (r/100)/f)**(- t * f))).toFixed(3);
+
+        document.getElementById("result").innerHTML = frequency + " payment of $" + ans;
+
+    }
 }
 
 
