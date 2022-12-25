@@ -320,7 +320,6 @@ function calculate_bmi(){
 
     document.getElementById("result").innerHTML = "BMI is " + bmi + ", and bfp is " + bfp.toFixed(2) + ". And you are " + result;
 
-
 }
 
 window.addEventListener("load", start, false);
