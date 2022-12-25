@@ -1,4 +1,3 @@
-var responseDoc;
 var weight_button; 
 var length_button;
 var area_button;
@@ -134,7 +133,7 @@ function register_mortgage_events(){
     document.getElementById("down_payment").addEventListener("blur", validate_down_payment, false);
     document.getElementById("interest_rate").addEventListener("blur", validate_interest_rate, false);
     document.getElementById("loan_term").addEventListener("blur", validate_loan_term, false);
-    document.getElementById("calculate").addEventListener("click", calculate, false); 
+    document.getElementById("calculate").addEventListener("click", calculate_mortgage, false); 
 
 }
 
@@ -184,7 +183,7 @@ function validate_loan_term(){
 
 // calculating the payment amount
 
-function calculate(){
+function calculate_mortgage(){
 
     var p = document.getElementById("loan_amount").value;
     var r = document.getElementById("interest_rate").value;
@@ -200,9 +199,10 @@ function calculate(){
 
     if(p <= 0 || r < 0 || t <= 0 || d < 0){
 
-        alert("Inputs wrong, please try again");
+        alert("Inputs wrong or incompleted, please try again");
 
     }
+    // if interest is zero percent
     else if(r == 0){
 
         ans = (p / (t * f)).toFixed(3);
@@ -223,6 +223,15 @@ function calculate(){
 
 // ------------------- BMI App -------------------
 
+var weight;
+var height;
+var age;
+var gender;
+var unit;
+var bmi;
+var bfp;
+var result;
+
 function bmi(){
 
     load_app("bmi.html", register_bmi_events, "app");
@@ -230,6 +239,86 @@ function bmi(){
 }
 
 function register_bmi_events(){
+
+    document.getElementById("weight").addEventListener("blur", validate_weight, false);
+    document.getElementById("height").addEventListener("blur", validate_height, false);
+    document.getElementById("age").addEventListener("blur", validate_age, false);
+    document.getElementById("calculate").addEventListener("click", calculate_bmi, false);
+
+}
+
+function validate_weight(){
+    number = document.getElementById("weight").value;
+    if(number <= 0){
+        alert("Invalid weight, cannot be negative or zero!");
+        document.getElementById("weight").value = -1 * number;
+    }
+}
+
+function validate_height(){
+    number = document.getElementById("height").value;
+    if(number <= 0){
+        alert("Invalid height, cannot be negative or zero!");
+        document.getElementById("height").value = -1 * number;
+    }
+}
+
+function validate_age(){
+    number = document.getElementById("age").value;
+    if(number <= 0){
+        alert("Invalid age, cannot be negative or zero!");
+        document.getElementById("age").value = -1 * number;
+    }
+}
+
+
+// calculate the bmi and bfp of the person
+function calculate_bmi(){
+
+    weight = document.getElementById("weight").value;
+    height = document.getElementById("height").value;
+    age = document.getElementById("age").value;
+    gender = document.getElementById("gender").value;
+    unit = document.getElementById("unit").value;
+
+    if(weight <= 0 || height <= 0 || age <= 0){
+        alert("wrong or incompleted inputs, please try again");
+        return;
+    }
+
+    bmi = (weight / (height**2)).toFixed(2);
+
+    if(unit == "american"){
+        bmi = bmi * 703;
+    }
+
+    if(gender == "male" && age >= 18){
+        bfp = 1.2 * bmi + 0.23 * age - 16.2;
+    }
+    else if(gender == "female" && age >= 18){
+        bfp = 1.2 * bmi + 0.23 * age - 5.4;
+    }
+    else if(gender == "male" && age < 18){
+        bfp = 1.51 * bmi - 0.7 * age - 2.2;
+    }
+    else{
+        bfp = 1.51 * bmi - 7.0 * age + 1.4;
+    }
+
+    if(bmi < 18.5){
+        result = "underweight.";
+    }
+    else if(bmi < 25){
+        result = "normal.";
+    }
+    else if(bmi < 30){
+        result = "overweight.";
+    }
+    else{
+        result = "obese.";
+    }
+
+    document.getElementById("result").innerHTML = "BMI is " + bmi + ", and bfp is " + bfp.toFixed(2) + ". And you are " + result;
 
 
 }

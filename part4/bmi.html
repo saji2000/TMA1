@@ -1,5 +1,9 @@
 <div class="description">
-    <h1>BMI (Body Mass Index) Calculator</h1>
+    <h1>BMI and Body Fat Percentage Calculator</h1>
+    
+    <div>
+        <p>The Metric units are Kilograms and Meter, and the American units are Pounds and Inches!</p>
+    </div>
 
     <label>Weight: </label>
     <input type="number" id="weight" placeholder="Enter number">
@@ -7,17 +11,21 @@
     <label>Height: </label>
     <input type="number" id="height" placeholder="Enter number">
 
-    <select name="system" id="system">
-        <option value="metric" selected="selected">Metric System</option>
-        <option value="american">American System</option>
-    </select>
+    <label>Age: </label>
+    <input type="number" id="age" placeholder="Enter number">
 
     <select name="gender" id="gender">
         <option value="male" selected="selected">Male</option>
         <option value="female">Female</option>
     </select>
 
+    <select name="unit" id="unit">
+        <option value="metric" selected="selected">Metric System</option>
+        <option value="american">American System</option>
+    </select>
+
     <button id="calculate" class="button">Calculate</button>
+
 
     <div class = "center" id = "result"></div>
 </div>
