@@ -57,6 +57,7 @@ let string = "";
 
 load_questions(0);
 
+// summing the score
 function sum(n){
     let sum = 0;
     for(let k = 0; k < n.length; k++){
